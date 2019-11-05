@@ -1,6 +1,7 @@
 #! /bin/bash
 
 #INSTALING FIRST
+sudo apt update
 sudo apt install apt-transport-https curl nodejs npm git zsh
 
 
@@ -20,10 +21,21 @@ source /etc/os-release
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list
 
 
-#INSTALLING LATER
+#ADDING SOURC FOR INSOMNIA
+echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
+| sudo tee -a /etc/apt/sources.list.d/insomnia.list
+# Add public key used to verify code signature
+wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
+| sudo apt-key add -
+
+
+#DEALING WITH THE APT INSTALL
 sudo apt update
+
 sudo apt install brave-browser
 sudo apt install --no-install-recommends yarn
+sudo apt-get install insomnia
+sudo apt install plank
 
 
 #CHANGE SHELL
@@ -37,7 +49,24 @@ wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/.zshrc -O
 source ~/.zshrc
 
 
-#GENETATE SSH KEY
+#INSTALLING APPS
+wget https://discordapp.com/api/download?platform=linux&format=deb -O ~/Downloads/discord.deb
+sudo dpkg -i ~/Downloads/discord.deb
+rm -rf ~/Downloads/discord.deb
+
+
+#DOWNLOADING MAC OS THEME
+git clone https://github.com/paullinuxthemer/McOS-Mint-Cinnamon-Edition.git ~/Downloads/macOS-theme
+mv ~/Downloads/macOS-theme/McOS-MJV-Cinnamon-Edition-2.0 ~/.themes/macOS_2
+rm -rf ~/Downloads/macOS-theme
+git clone https://github.com/shinspiegel/dotfiles.git ~/Downloads/macOS-icons
+cp ~/Downloads/macOS-icons/src/Cuppertine ~/.icons/CuppertineIcons -r
+rm -rf ~/Downloads/macOS-icons
+
+
+#GENETATE SSH    KEY
 ssh-keygen -t rsa -b 4096 -C "shin.jef@gmail.com"
+git config --global user.email "shin.jef@gmail.com"
+git config --global user.name "Shin"
 cat ~/.ssh/id_rsa.pub
 
