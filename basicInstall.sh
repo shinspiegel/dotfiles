@@ -2,12 +2,25 @@
 
 #INSTALING FIRST
 sudo apt update
-sudo apt install apt-transport-https curl nodejs npm git zsh
+sudo apt install apt-transport-https curl nodejs npm git zsh wget libnss3-tools
 
 
 #UPDATE NODE
 sudo npm install -g n
 sudo n lts
+
+#expand limit of watch files
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+#installing other node apps 
+sudo npm install -g create-react-app serverless serverless-offline
+
+
+#INSTALL LOCALHOST CERTS
+export VER="v1.3.0"
+wget -O mkcert https://github.com/FiloSottile/mkcert/releases/download/v1.4.0/mkcert-v1.4.0-linux-amd64
+chmod +x  mkcert
+sudo mv mkcert /usr/local/bin
 
 
 #ADDING YARN TO PACKAGE LIST
