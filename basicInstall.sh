@@ -71,6 +71,7 @@ sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io
+sudo usermod -a -G docker $USER
 
 #installing docker-compose
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
@@ -125,9 +126,12 @@ rm -rf ~/Downloads/macOS-icons
 
 
 
-#GENETATE SSH KEY
+#GENETATE SSH KEY FOR GITHUB/GITLAB
 ssh-keygen -t rsa -b 4096 -C "shin.jef@gmail.com"
 git config --global user.email "shin.jef@gmail.com"
 git config --global user.name "Shin"
-cat ~/.ssh/id_rsa.pub
 
+echo "------- THIS IS YOUR SSH -------"
+cat ~/.ssh/id_rsa.pub
+echo "-------                  -------"
+echo "Remember to reboot before using docker"
