@@ -28,3 +28,4 @@ This is a basic script for installing my Linux Mint setup on any machine.
 - [x] **Cuppertine** icons for more styling
 - [x] **plank** for more convenient access to folders
 - [x] **docker-ce** running on linux mint
+- [x] **docker-compose** for better docker
