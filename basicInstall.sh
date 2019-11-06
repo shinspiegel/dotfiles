@@ -2,8 +2,7 @@
 
 #INSTALING FIRST
 sudo apt update
-sudo apt install apt-transport-https curl nodejs npm git zsh wget libnss3-tools
-
+sudo apt install apt-transport-https curl nodejs npm git zsh wget libnss3-tools ca-certificates gnupg-agent software-properties-common
 
 
 #UPDATE NODE
@@ -62,6 +61,16 @@ sudo apt install brave-browser
 sudo apt install --no-install-recommends yarn
 sudo apt-get install insomnia
 sudo apt install plank
+
+
+
+#INSTALLING DOCKER
+sudo apt remove docker docker-engine docker.io containerd runc
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
 
 
 

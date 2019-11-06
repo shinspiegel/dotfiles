@@ -2,7 +2,11 @@
 
 This is a basic script for installing my Linux Mint setup on any machine.
 
-What you get on this:
+## What you needsudo docker run hello-world
+
+- A Linux Mint 19+ machine with a clean install
+
+## What you get on this:
 
 - [x] **zsh** shell, better shell
 - [x] **oh-my-zsh**, tool kit with lot of stuff
@@ -23,3 +27,4 @@ What you get on this:
 - [x] cinnamon **macOS** style
 - [x] **Cuppertine** icons for more styling
 - [x] **plank** for more convenient access to folders
+- [x] **docker-ce** running on linux mint
