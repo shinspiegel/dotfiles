@@ -2,7 +2,8 @@
 
 #INSTALING FIRST
 sudo apt update
-sudo apt install apt-transport-https curl nodejs npm git zsh wget libnss3-tools ca-certificates gnupg-agent software-properties-common
+sudo apt install apt-transport-https curl nodejs npm git zsh wget libnss3-tools ca-certificates gnupg-agent software-properties-common htop
+
 
 
 #UPDATE NODE
@@ -35,6 +36,15 @@ ln -s /opt/mkcert/create-cert.sh ~/bin/create-cert
 
 
 
+#INSTALL SCRIPT FOR CLEANING BRANCHS
+sudo mkdir /opt/clean-branchs
+sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/clean-branchs/create-cert.sh -O /opt/clean-branchs/clean-branchs.sh
+sudo chmod 755 /opt/clean-branchs/clean-branchs.sh
+ln -s /opt/clean-branchs/clean-branchs.sh ~/bin/clean-branchs
+
+
+
+
 
 #ADDING YARN TO PACKAGE LIST
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -64,6 +74,24 @@ sudo apt install plank
 
 
 
+#CHANGE SHELL
+chsh -s $(which zsh)
+sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -L git.io/antigen > antigen.zsh
+# or use git.io/antigen-nightly for the latest version
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+sudo wget https://github.com/powerline/fonts/raw/master/Inconsolata-g/Inconsolata-g%20for%20Powerline.otf -O /usr/share/fonts/Inconsolata-g-for-Powerline.otf
+wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/.zshrc -O ~/.zshrc
+source ~/.zshrc
+
+
+
+#INSTALLING Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt-get install libfreetype6-dev
+
+
+
 #INSTALLING DOCKER
 sudo apt remove docker docker-engine docker.io containerd runc
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -79,23 +107,13 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 
-#CHANGE SHELL
-chsh -s $(which zsh)
-sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-curl -L git.io/antigen > antigen.zsh
-# or use git.io/antigen-nightly for the latest version
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-sudo wget https://github.com/powerline/fonts/raw/master/Inconsolata-g/Inconsolata-g%20for%20Powerline.otf -O /usr/share/fonts/Inconsolata-g-for-Powerline.otf
-wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/.zshrc -O ~/.zshrc
-source ~/.zshrc
-
-
-
 #INSTALLING APPS VIA DEBIAN FILES
+#Discord
 wget https://discordapp.com/api/download?platform=linux&format=deb -O ~/Downloads/discord.deb
 sudo dpkg -i ~/Downloads/discord.deb
 rm -rf ~/Downloads/discord.deb
-
+#Calibre
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 
 
 #INSTALLING FONTS FOR VISUAL CODE

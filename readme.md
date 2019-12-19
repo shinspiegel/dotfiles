@@ -29,3 +29,4 @@ This is a basic script for installing my Linux Mint setup on any machine.
 - [x] **plank** for more convenient access to folders
 - [x] **docker-ce** running on linux mint
 - [x] **docker-compose** for better docker
+- [x] **Rust** prepared for compiling, with all libs
