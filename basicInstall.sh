@@ -52,7 +52,7 @@ ln -s /opt/clean-branchs/clean-branchs.sh ~/bin/clean-branchs
 
 #INSTALL SCRIPT FOR CLEANING BRANCHS
 sudo mkdir /opt/git-pull-all
-sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/clean-branchs/git-pull-all.sh -O /opt/git-pull-all/git-pull-all.sh
+sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/git-pull-all/git-pull-all.sh -O /opt/git-pull-all/git-pull-all.sh
 sudo chmod 755 /opt/git-pull-all/git-pull-all.sh
 ln -s /opt/git-pull-all/git-pull-all.sh ~/bin/git-pull-all
 
