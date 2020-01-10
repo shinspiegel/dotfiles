@@ -6,6 +6,14 @@ sudo apt install apt-transport-https curl nodejs npm git zsh wget libnss3-tools 
 
 
 
+#INSTALLING DENO
+# curl -fsSL https://deno.land/x/install/install.sh | sh
+# export DENO_INSTALL="/home/shin/.local"
+# export PATH="$DENO_INSTALL/bin:$PATH"
+
+
+
+
 #UPDATE NODE
 sudo npm install -g n
 sudo n lts
@@ -42,6 +50,11 @@ sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/clea
 sudo chmod 755 /opt/clean-branchs/clean-branchs.sh
 ln -s /opt/clean-branchs/clean-branchs.sh ~/bin/clean-branchs
 
+#INSTALL SCRIPT FOR CLEANING BRANCHS
+sudo mkdir /opt/git-pull-all
+sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/clean-branchs/git-pull-all.sh -O /opt/git-pull-all/git-pull-all.sh
+sudo chmod 755 /opt/git-pull-all/git-pull-all.sh
+ln -s /opt/git-pull-all/git-pull-all.sh ~/bin/git-pull-all
 
 
 
@@ -88,6 +101,13 @@ source ~/.zshrc
 #INSTALLING Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install libfreetype6-dev
+
+
+
+#INSTALLING virtual machine dependencies for android
+# sudo apt install qemu-kvm
+# ls -al /dev/kvm
+# sudo adduser $USER kvm
 
 
 
