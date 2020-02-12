@@ -1,9 +1,10 @@
-
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 export PATH="$HOME/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
+export DENO_INSTALL="/home/shin/.local"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Get color support for 'less'
 export LESS="--RAW-CONTROL-CHARS"
@@ -18,6 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 # use nvm stuff
 [[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
+alias ~="cd ~"
 alias ..="cd .."
 alias 1..="cd .."
 alias 2..="cd ../.."
@@ -25,11 +27,11 @@ alias 3..="cd ../../.."
 alias 4..="cd ../../../.."
 alias 5..="cd ../../../../.."
 alias 6..="cd ../../../../../.."
-alias ~="cd ~"
+
 alias projetos="/home/shin/Documents/Projects"
 alias aulas="/home/shin/Documents/Aulas"
 alias tentaculo="/home/shin/Documents/Tentaculo"
-
+alias pos="/home/shin/Documents/Pos-Graduação"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
