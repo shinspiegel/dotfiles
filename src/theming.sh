@@ -3,11 +3,13 @@
 #CHANGE SHELL
 chsh -s $(which zsh)
 sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-curl -L git.io/antigen > antigen.zsh
+mkdir ~/.antigen
+sudo wget https://raw.githubusercontent.com/zsh-users/antigen/develop/src/antigen.zsh -O ~/.antigen/antigen.zsh
+
 # or use git.io/antigen-nightly for the latest version
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts/Inconsolata-g-for-Powerline.otf -O /usr/share/fonts/Inconsolata-g-for-Powerline.otf
-sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/.zshrc -O ~/.zshrc
+sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/assets/.zshrc -O ~/.zshrc
 
 
 #INSTALLING FONTS FOR VISUAL CODE
@@ -22,7 +24,7 @@ sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts
 mkdir /home/$USER/.themes
 mkdir /home/$USER/.icons
 
-git clone https://github.com/shinspiegel/dotfiles.git ~/Downloads/theme_macOS
+git clone https://github.com/shinspiegel/dotfiles.git ~/Downloads/files_to_copy
 
 cp ~/Downloads/macOS-icons/src/assets/icons ~/.themes/CuppertineIcons -r
 cp ~/Downloads/macOS-icons/src/assets/theme ~/.icons/CuppertineIcons -r
