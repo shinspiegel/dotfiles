@@ -7,16 +7,17 @@ sudo wget https://raw.githubusercontent.com/zsh-users/antigen/develop/src/antige
 
 # or use git.io/antigen-nightly for the latest version
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts/Inconsolata-g-for-Powerline.otf -O /usr/share/fonts/Inconsolata-g-for-Powerline.otf
+sudo wget https://github.com/shinspiegel/dotfiles/raw/master/srce/assets/fonts/Inconsolata-g-for-Powerline.otf -O /usr/share/fonts/Inconsolata-g-for-Powerline.otf
 sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/assets/.zshrc -O ~/.zshrc
 
 
 #INSTALLING FONTS FOR VISUAL CODE
-sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts/FiraCode-Bold.otf -O /usr/share/fonts/FiraCode-Bold.otf
-sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts/FiraCode-Light.otf -O /usr/share/fonts/FiraCode-Light.otf
-sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts/FiraCode-Medium.otf -O /usr/share/fonts/FiraCode-Medium.otf
-sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts/FiraCode-Regular.otf -O /usr/share/fonts/FiraCode-Regular.otf
-sudo wget https://github.com/shinspiegel/dotfiles/raw/master/newSrc/assets/fonts/FiraCode-Retina.otf -O /usr/share/fonts/FiraCode-Retina.otf
+sudo mkdir /usr/share/fonts/opentype/fira
+sudo wget https://github.com/shinspiegel/dotfiles/raw/master/src/assets/fonts/FiraCode-Bold.otf -O /usr/share/fonts/opentype/fira/FiraCode-Bold.otf
+sudo wget https://github.com/shinspiegel/dotfiles/raw/master/src/assets/fonts/FiraCode-Light.otf -O /usr/share/fonts/opentype/fira/FiraCode-Light.otf
+sudo wget https://github.com/shinspiegel/dotfiles/raw/master/src/assets/fonts/FiraCode-Medium.otf -O /usr/share/fonts/opentype/fira/FiraCode-Medium.otf
+sudo wget https://github.com/shinspiegel/dotfiles/raw/master/src/assets/fonts/FiraCode-Regular.otf -O /usr/share/fonts/opentype/fira/FiraCode-Regular.otf
+sudo wget https://github.com/shinspiegel/dotfiles/raw/master/src/assets/fonts/FiraCode-Retina.otf -O /usr/share/fonts/opentype/fira/FiraCode-Retina.otf
 
 
 #DOWNLOADING MAC OS THEME

@@ -1,19 +1,19 @@
 #! /bin/bash
 
 # This is the most basic stuff, enable the rest
-./newSrc/basic.sh
-./newSrc/theming.sh
-./newSrc/updateNode_and_nodeApps.sh
-./newSrc/install_mkcerts.sh
-./newSrc/install_otherApps.sh
-./newSrc/ssh.sh
+./src/basic.sh
+./src/theming.sh
+./src/updateNode_and_nodeApps.sh
+./src/install_mkcerts.sh
+./src/install_otherApps.sh
+./src/ssh.sh
 
 
 # Usefull stuff
-# ./newSrc/install_clean-branchs.sh
-# ./newSrc/deno.sh
-# ./newSrc/docker.sh
-# ./newSrc/godot.sh
-# ./newSrc/rust.sh
-# ./newSrc/virtualMachineDependencies.sh
+# ./src/install_clean-branchs.sh
+# ./src/deno.sh
+# ./src/docker.sh
+# ./src/godot.sh
+# ./src/rust.sh
+# ./src/virtualMachineDependencies.sh
 

@@ -27,11 +27,12 @@ alias aulas="/home/shin/Documents/Aulas"
 alias tentaculo="/home/shin/Documents/Tentaculo"
 alias pos="/home/shin/Documents/Pos-Graduação"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context time dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_first_and_last"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 source ~/antigen.zsh
@@ -55,3 +56,4 @@ antigen theme robbyrussell
 
 # Tell Antigen that you're done.
 antigen apply
+
