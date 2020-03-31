@@ -26,7 +26,7 @@ mkdir /home/$USER/.icons
 
 git clone https://github.com/shinspiegel/dotfiles.git ~/Downloads/files_to_copy
 
-cp ~/Downloads/macOS-icons/src/assets/icons ~/.themes/CuppertineIcons -r
-cp ~/Downloads/macOS-icons/src/assets/theme ~/.icons/CuppertineIcons -r
+cp ~/Downloads/files_to_copy/src/assets/icons ~/.themes/CuppertineIcons -r
+cp ~/Downloads/files_to_copy/src/assets/theme ~/.icons/CuppertineIcons -r
 
-rm -rf ~/Downloads/theme_macOS
+rm -rf ~/Downloads/files_to_copy
