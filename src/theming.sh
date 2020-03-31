@@ -7,7 +7,7 @@ sudo wget https://raw.githubusercontent.com/zsh-users/antigen/develop/src/antige
 
 # or use git.io/antigen-nightly for the latest version
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-sudo wget https://github.com/shinspiegel/dotfiles/raw/master/srce/assets/fonts/Inconsolata-g-for-Powerline.otf -O /usr/share/fonts/Inconsolata-g-for-Powerline.otf
+sudo wget https://github.com/shinspiegel/dotfiles/raw/master/src/assets/fonts/Inconsolata-g-for-Powerline.otf -O /usr/share/fonts/Inconsolata-g-for-Powerline.otf
 sudo wget https://raw.githubusercontent.com/shinspiegel/dotfiles/master/src/assets/.zshrc -O ~/.zshrc
 
 
