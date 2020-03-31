@@ -3,7 +3,9 @@
 #CHANGE SHELL
 chsh -s $(which zsh)
 sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-sudo wget https://raw.githubusercontent.com/zsh-users/antigen/develop/src/antigen.zsh -O ~/antigen.zsh
+cd ~
+curl -L git.io/antigen > antigen.zsh
+-
 
 # or use git.io/antigen-nightly for the latest version
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
