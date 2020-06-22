@@ -30,3 +30,26 @@ This is a basic script for installing my Linux Mint setup on any machine.
 - [x] **docker-ce** running on linux mint
 - [x] **docker-compose** for better docker
 - [x] **Rust** prepared for compiling, with all libs
+
+### Fixing SSD NVMe M.2
+
+Open the terminal and change the GRUB settings:
+
+```sh
+xed admin:///etc/default/grub
+```
+
+The following should be as this
+
+```txt
+GRUB_DEFAULT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="nvme_core.default_ps_max_latency_us=5500 quiet splash"
+GRUB_CMDLINE_LINUX=""
+```
+
+The GRUB_CMDLINE_LINUX_DEFAULT=**"nvme_core.default_ps_max_latency_us=5500** quiet splash", should be a higher number.
+
+After the change, `sudo update-grub` and `reboot`
