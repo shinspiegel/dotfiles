@@ -11,3 +11,7 @@ sudo touch /etc/apt/sources.list.d/additional-repositories.list
 echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" >> /etc/apt/sources.list.d/additional-repositories.list
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
