@@ -2,10 +2,12 @@ export ZSH="/Users/shin/.oh-my-zsh"
 ZSH_THEME="shin"
 ZSH_DISABLE_COMPFIX=true
 
+
 # Export variables
 export DENO_INSTALL="/Users/shin/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="/Users/shin/.cargo/bin:$PATH"
+
 
 # Settings for NVM
 export NVM_DIR="$HOME/.nvm"
@@ -17,6 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
+
 
 # JAVA / Android settings
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
